@@ -1,0 +1,21 @@
+{% extends 'base_signup.html' %}
+{% load bootstrap4 %}
+
+{% block title %}LogIn{% endblock %}
+
+{% block heading %}Pizza Shop - Registration Page{% endblock %}
+
+{% block content %}
+<br>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h5 class="text-uppercase"><strong>Owner</strong></h5>
+    {% bootstrap_form user_form %}
+    <br>
+    <h5 class="text-uppercase"><strong>Your Pizza Shop</strong></h5>
+    {% bootstrap_form pizzashop_form %}
+    <br>
+    <button type="submit" class="btn btn-outline-danger float-end">Register</button>
+    <a href="{% url 'pizzashop-sign-in' %}">Already registered?</a>
+</form>
+{% endblock %}
