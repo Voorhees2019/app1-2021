@@ -133,8 +133,8 @@ LOGIN_REDIRECT_URL = '/'
 MEDIA_ROOT = (BASE_DIR / 'media')
 MEDIA_URL = '/media/'
 
-# STATIC_ROOT = (BASE_DIR / 'staticfiles')
-# 
+STATIC_ROOT = (BASE_DIR / 'staticfiles')
+
 # import dj_database_url
 # db_from_env = dj_database_url.config()
 # DATABASES['default'].update(db_from_env)
